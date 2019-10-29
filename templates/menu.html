@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+    <div class="container">
+        <div class="row">
+            <div class="col text-center" style="padding: 19px;"><a class="btn btn-primary text-center" role="button" style="width: 240px;height: 84px;" href="specimen-assign">ASSIGN</a></div>
+            
+            <div class="col text-center" style="padding: 19px;"><button class="btn btn-primary text-center" type="button" style="width: 240px;height: 84px;">INQUIRY</button></div>
+        </div>
+        <div class="row">
+            <div class="col text-center" style="padding: 19px;"><button class="btn btn-primary text-center" type="button" style="width: 240px;height: 84px;">MAINTENANCE</button></div>
+            <div class="col text-center" style="padding: 19px;"><button class="btn btn-primary text-center" type="button" style="width: 240px;height: 84px;">REPORTS</button></div>
+        </div>
+        <div class="row">
+            <div class="col text-center" style="padding: 19px;"><button class="btn btn-primary text-center" type="button" style="width: 240px;height: 84px;">EXIT</button></div>
+        </div>
+    </div>
+
+    {% for post in posts %}
+        <strong>Title: </strong>{{ post.title }}
+        <strong>Post: </strong>{{ post.description }}
+    {% endfor %}
+</div>
+{% endblock%}
